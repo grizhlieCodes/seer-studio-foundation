@@ -7,11 +7,10 @@
 	import { z } from 'zod';
 	const newContactSchema = z.object({
 		firstName: z.string().min(1),
-		email: z.string().email().min(1),
+		email: z.string().email().min(1)
 		// _template: z.string(),
 		// _autoresponse: z.string(),
 		// _honey: z.string()
-
 	});
 
 	const { form, errors, enhance, constraints } = superForm(data.form, {
@@ -19,7 +18,7 @@
 		validators: newContactSchema,
 		async onResult({ result }) {
 			if (result.data.form.valid) {
-				const res = await submitForm()
+				const res = await submitForm();
 			}
 		}
 	});
@@ -35,16 +34,16 @@
 		// });
 
 		const response = await fetch('/', {
-			method: "POST",
+			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams($form).toString()
-		})
+		});
 
 		if (response.ok) {
 			const result = await response.json();
 			console.log(result);
 			// handle success
-		} else {
+		} else{
 			// handle error
 			console.error('There was an error submitting the form');
 		}
@@ -69,7 +68,7 @@
 		method="POST"
 		class="space-y-6 bg-black/20 rounded-2xl w-full py-10 px-10
 	max-w-2xl"
-	data-netlify="true"
+		data-netlify="true"
 	>
 		<h1 class="text-4xl">Our Form</h1>
 		<!-- Special Fields, figure out how to add them correctly -->
