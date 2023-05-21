@@ -87,6 +87,7 @@
 			console.log(result)
 			if(result.status === 200){
 				valid = true;
+				submitForm()
 			}
 		} else {
 			console.error(`Didn't fucking work`)
