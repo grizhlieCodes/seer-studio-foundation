@@ -7,11 +7,12 @@
 	import { z } from 'zod';
 	const newContactSchema = z.object({
 		firstName: z.string().min(1),
-		email: z.string().email().min(1)
+		email: z.string().email().min(1),
+		'form-name': z.string(),
 		// _template: z.string(),
 		// _autoresponse: z.string(),
-		// _honey: z.string()
-	});
+		// _honey: z.string(),
+	})
 
 	const { form, errors, enhance, constraints } = superForm(data.form, {
 		taintedMessage: 'Are you sure you want to leave?',
@@ -50,12 +51,12 @@
 	};
 
 	$: console.log($form);
-	// $: if($form){
-	// 	$form["_template"] = "table"
-	// 	$form["_autoresponse"] = `thanks buddy`
-
-	// 	console.log($form)
-	// }
+	$: if($form){
+		// $form["_template"] = "table"
+		// $form["_autoresponse"] = `thanks buddy`
+		$form["form-name"] = 'contact'
+		// console.log($form)
+	}
 </script>
 
 <SuperDebug data={$form} />
