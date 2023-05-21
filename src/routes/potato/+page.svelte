@@ -102,7 +102,6 @@
 		bind:this={formm}
 		on:input|preventDefault={validateForm}
 		name="contact"
-		use:enhance
 		action=""
 		method="POST"
 		class="space-y-6 bg-black/20 rounded-2xl w-full py-10 px-10
