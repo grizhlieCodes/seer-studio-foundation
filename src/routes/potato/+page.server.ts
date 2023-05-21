@@ -5,9 +5,9 @@ import { fail } from '@sveltejs/kit';
 const newContactSchema = z.object({
 	firstName: z.string().min(1),
 	email: z.string().email().min(1),
-	_template: z.string(),
-	_autoresponse: z.string(),
-	_honey: z.string()
+	// _template: z.string(),
+	// _autoresponse: z.string(),
+	// _honey: z.string()
 });
 
 export const load = async (event) => {

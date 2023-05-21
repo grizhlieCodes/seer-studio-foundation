@@ -8,9 +8,9 @@
 	const newContactSchema = z.object({
 		firstName: z.string().min(1),
 		email: z.string().email().min(1),
-		_template: z.string(),
-		_autoresponse: z.string(),
-		_honey: z.string()
+		// _template: z.string(),
+		// _autoresponse: z.string(),
+		// _honey: z.string()
 
 	});
 
@@ -51,12 +51,12 @@
 	};
 
 	$: console.log($form);
-	$: if($form){
-		$form["_template"] = "table"
-		$form["_autoresponse"] = `thanks buddy`
+	// $: if($form){
+	// 	$form["_template"] = "table"
+	// 	$form["_autoresponse"] = `thanks buddy`
 
-		console.log($form)
-	}
+	// 	console.log($form)
+	// }
 </script>
 
 <SuperDebug data={$form} />
@@ -72,7 +72,7 @@
 	>
 		<h1 class="text-4xl">Our Form</h1>
 		<!-- Special Fields, figure out how to add them correctly -->
-		<input type="text" name="_honey" class="sr-only" bind:value={$form["_honey"]}>
+		<!-- <input type="text" name="_honey" class="sr-only" bind:value={$form["_honey"]}> -->
 		<!-- <input class="sr-only" type="hidden" name="_next"
 		value="https://innervoyage.netlify.app/contact-successful"> -->
 		<!-- <input type="hidden" class="sr-only" name="_template"
