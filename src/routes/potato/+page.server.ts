@@ -19,9 +19,8 @@ export const load = async (event) => {
 };
 
 export const actions = {
-	default: async (event) => {
+	test: async (event) => {
 		const form = await superValidate(event, newContactSchema);
-		console.log(form);
 
 		if (!form.valid) {
 			return fail(400, {
@@ -29,6 +28,9 @@ export const actions = {
 			});
 		}
 
-		return { form };
+		return { 
+			formValid: true,
+			form
+		};
 	}
 };
