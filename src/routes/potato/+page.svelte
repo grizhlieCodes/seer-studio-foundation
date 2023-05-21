@@ -68,6 +68,7 @@
 		method="POST"
 		class="space-y-6 bg-black/20 rounded-2xl w-full py-10 px-10
 	max-w-2xl"
+	data-netlify="true"
 	>
 		<h1 class="text-4xl">Our Form</h1>
 		<!-- Special Fields, figure out how to add them correctly -->
