@@ -107,6 +107,7 @@
 	max-w-2xl"
 		data-netlify="true"
 	>
+	<input type="hidden" name="form-name" value="contact" />
 		<h1 class="text-4xl">Our Form</h1>
 		<!-- Special Fields, figure out how to add them correctly -->
 		<!-- <input type="text" name="_honey" class="sr-only" bind:value={$form["_honey"]}> -->
