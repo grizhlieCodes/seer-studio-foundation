@@ -34,7 +34,7 @@
 		// 	body: JSON.stringify($form)
 		// });
 
-		const response = await fetch('/.netlify/functions/contact', {
+		const response = await fetch('/', {
 			method: "POST",
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams($form).toString()
