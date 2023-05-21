@@ -34,7 +34,7 @@
 		// 	body: JSON.stringify($form)
 		// });
 
-		const response = await fetch('/', {
+		const response = await fetch('/.netlify/functions/contact', {
 			method: "POST",
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams($form).toString()
@@ -63,6 +63,7 @@
 
 <div class="grid place-items-center w-full min-h-screen gap-6">
 	<form
+		name="contact"
 		use:enhance
 		action=""
 		method="POST"
