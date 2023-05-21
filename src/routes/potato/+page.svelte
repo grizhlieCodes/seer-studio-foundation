@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true
 	import { superForm } from 'sveltekit-superforms/client';
 	import type { PageData } from './$types';
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
