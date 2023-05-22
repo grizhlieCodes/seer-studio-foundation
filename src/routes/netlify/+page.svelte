@@ -55,6 +55,7 @@
 
 <div class="grid place-items-center w-full min-h-screen gap-6">
 	<form
+        data-netlify="true"
         name="contact-netlify"
 		on:input={validateForm}
 		method="POST"
